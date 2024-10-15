@@ -65,14 +65,14 @@ Make sure you have the following installed on your machine:
 6. Run database migrations:
 
    Apply the migrations to your database:
-          ```bash
-    pnpm migrate
-    ```
+   ```bash
+   pnpm migrate
+   ```
 
 7. Start the application:
 
    To start the application in development mode, use:
-       ```bash
-    pnpm start:dev
-    ```
-    By default, the API will be available at http://localhost:3000.
+   ```bash
+   pnpm start:dev
+   ```
+   By default, the API will be available at http://localhost:3000.
