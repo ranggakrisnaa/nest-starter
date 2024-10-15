@@ -19,8 +19,8 @@ This is a basic starter project for building APIs with [NestJS](https://nestjs.c
 
 Make sure you have the following installed on your machine:
 
--   [Node.js](https://nodejs.org/) (v14 or higher)
--   [npm](https://www.npmjs.com/) (v6 or higher)
+-   [Node.js](https://nodejs.org/) (v18-lts)
+-   [pnpm](https://pnpm.io/id/) (v9)
 -   [PostgreSQL](https://www.postgresql.org/) or any other SQL database (optional, based on the database you're using)
 -   [Prisma](https://www.prisma.io/) for database management
 
@@ -32,3 +32,47 @@ Make sure you have the following installed on your machine:
     git clone https://github.com/ranggakrisnaa/nest-starter.git
     cd nest-starter
     ```
+    
+2. Install the dependencies:
+
+   Install all required packages:
+    ```bash
+    pnpm install
+    ```
+    
+3. Set up environment variables:
+   
+   Create a .env file in the root directory and add the following environment variables:
+    ```bash
+    DB_USER=XXXX
+    DB_PASSWORD=XXXX
+    DB_HOST=XXXX
+    DB_PORT=XXXX
+    DB_NAME=XXXX
+    ```
+    
+4. Generate Prisma client:
+
+    After setting up the environment variables, generate the Prisma client:
+    ```bash
+    npx prisma generate
+    ```
+
+5. Add new schema prisma:
+
+   Modify your schema prisma and add model to create new migration.
+    
+6. Run database migrations:
+
+   Apply the migrations to your database:
+          ```bash
+    pnpm migrate
+    ```
+
+7. Start the application:
+
+   To start the application in development mode, use:
+       ```bash
+    pnpm start:dev
+    ```
+    By default, the API will be available at http://localhost:3000.
