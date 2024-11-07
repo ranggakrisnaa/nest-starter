@@ -13,7 +13,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "migration:generate": "npx typeorm migration:generate -d ./dist/bin/ormconfig.js -p ./src/migration",
+    "migration:generate": "npx typeorm migration:generate -d ./dist/bin/ormconfig.js -p ./src/migrations/%NAME%",
     "migration:run": "npx typeorm migration:run -d ./dist/bin/ormconfig.js",
     "migration:revert": "npx typeorm migration:revert -d ./dist/bin/ormconfig.js",
     "test": "jest",
